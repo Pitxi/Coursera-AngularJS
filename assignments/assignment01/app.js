@@ -18,9 +18,12 @@
 			// Splitting the string ignoring whitespaces and removing empty values.
 			var foodList   = $scope.foodStr.split(/\s*,\s*/).filter(String);
 
+			console.log(foodList);
+
 			switch (foodList.length) {
 				case 0:
 					$scope.message = 'Please enter data first';
+					break;
 				case 1:
 				case 2:
 				case 3:
