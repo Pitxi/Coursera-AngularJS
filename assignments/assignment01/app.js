@@ -7,8 +7,12 @@
 	LaunchCtrl.$inject = [ '$scope' ];
 	function LaunchCtrl($scope)
 	{
-		$scope.foodStr = '';
-		$scope.message = '';
+		$scope.foodStr  = '';
+		$scope.messages = {
+			empty  : { text: 'Please enter data first', class: 'color-red'   },
+			enjoy  : { text: 'Enjoy!'                 , class: 'color-green' },
+			tooMuch: { text: 'Too much!'              , class: 'color-green' }
+		}
 
 		/**
 		 * Set the message according to the number of comma separated items.
@@ -16,21 +20,23 @@
 		$scope.setMessage = function()
 		{
 			// Splitting the string ignoring whitespaces and removing empty values.
-			var foodList   = $scope.foodStr.split(/\s*,\s*/).filter(String);
+			var foodList = $scope.foodStr.split(/\s*,\s*/).filter(String);
 
-			console.log(foodList);
+			// Format the input string.
+			$scope.foodStr = foodList.join(', ').trim();
 
+			// Set the message
 			switch (foodList.length) {
 				case 0:
-					$scope.message = 'Please enter data first';
+					$scope.message = $scope.messages.empty;
 					break;
 				case 1:
 				case 2:
 				case 3:
-					 $scope.message = 'Enjoy!';
+					 $scope.message = $scope.messages.enjoy;
 					 break;
 				default:
-					$scope.message = 'Too much!';
+					$scope.message = $scope.messages.tooMuch;
 			}
 		}
 	}

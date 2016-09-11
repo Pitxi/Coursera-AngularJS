@@ -1,0 +1,17 @@
+.message {
+	margin-top: 1rem;
+}
+
+.message span {
+	padding: 0.5rem;
+}
+
+.color-green {
+	color: green;
+	border: 1px solid green;
+}
+
+.color-red {
+	color: red;
+	border: 1px solid red;
+}
