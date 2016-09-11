@@ -14,9 +14,11 @@
 			<label for="foodInput">What do you want to eat?</label>
 			<input type="text" id="foodInput" ng-model="foodStr">
 			<button type="button" ng-click="setMessage()">Check If Too Much</button>
-			<pre>Note: Empty items not considered.</pre>
-			<div class="message">
-				<span class="{{ message.class }}">{{ message.text }}</span>
+			<div>
+				<div class="note">Note: Empty items and trailing whitespaces will be removed.</div>
+			</div>
+			<div>
+				<div class="message {{ message.class }}">{{ message.text }}</div>
 			</div>
 		</div>
 	</body>

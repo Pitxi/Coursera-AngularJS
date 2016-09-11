@@ -1,17 +1,33 @@
 .message {
+	display: inline-block;
 	margin-top: 1rem;
+	padding: 0.5rem;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.message span {
-	padding: 0.5rem;
+.note {
+	display: inline-block;
+	margin: 1rem 0 0.5rem 0;
+	color: rgb(200, 80, 0);
+	background-color: rgba(200, 80, 0, 0.25);
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+	padding: 1rem;
+	border: 2px solid rgb(200, 80, 0);
+	border-radius: 5px;
 }
 
 .color-green {
-	color: green;
-	border: 1px solid green;
+	color: rgb(0, 150, 0);
+	background-color: rgba(0, 150, 0, 0.25);
+	text-shadow: rgba(0, 0, 0, 0.25);
+	border: 2px solid rgb(0, 150, 0);
+	border-radius: 5px;
 }
 
 .color-red {
-	color: red;
-	border: 1px solid red;
+	color: rgb(150, 0, 0);
+	background-color: rgba(150, 0, 0, 0.25);
+	text-shadow: rgba(0, 0, 0, 0.25);
+	border: 2px solid rgb(150, 0, 0);
+	border-radius: 5px;
 }
