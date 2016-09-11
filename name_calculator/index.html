@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="nameCalculator">
+	<head>
+		<title>AngularJS testing</title>
+		<meta charset="UTF-8">
+		<script src="../bower_components/angular/angular.min.js"></script>
+		<script src="js/modules/nameCalculator.js"></script>
+		<script src="js/controllers/nameCalculatorCtrl.js"></script>
+	</head>
+	<body ng-controller="nameCalculatorCtrl">
+		<h1>{{ title }}</h1>
+		<input type="text" ng-model="str">
+		<div>Valor del nombre: {{ calculateNumericForString(str); }}</div>
+	</body>
+</html>

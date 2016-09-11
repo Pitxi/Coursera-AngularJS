@@ -1,0 +1,21 @@
+{
+  "name": "angular-test",
+  "homepage": "https://github.com/Pitxi/coursera-angular-test",
+  "description": "Testing AngularJS features.",
+  "main": "index.html",
+  "authors": [
+    "Javier Campón Pichardo"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8"
+  }
+}
