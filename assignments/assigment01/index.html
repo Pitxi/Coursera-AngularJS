@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Launch">
+	<head>
+		<title>Assignment 1 - It's launch time!!!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="LaunchCtrl">
+			<label for="foodInput">What do you want to eat?</label>
+			<input type="text" id="foodInput" ng-model="foodStr">
+			<button type="button" ng-click="setMessage()">Check If Too Much</button>
+			<div>{{ message }}</div>
+		</div>
+	</body>
+</html>

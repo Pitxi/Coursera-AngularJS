@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="UpperCaseInput">
+	<head>
+		<title>Uppercase Input</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div ng-controller="UpperCaseInputCtrl">
+			<input type="text" ng-model="name" ng-blur="upper()" autofocus>
+		</div>
+	</body>
+</html>
