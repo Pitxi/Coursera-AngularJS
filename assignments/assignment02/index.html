@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+		<title>Assignment 02 - Let's shop!!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="../../bower_components/angular/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div id="main-container" class="column">
+			<h1 id="main-title" class="row">Shopping list</h1>
+
+			<div class="row layout-space-between">
+				<!-- Items to buy -->
+				<div
+					class="shopping-list column expand"
+					ng-controller="toBuyShoppingListCtrl as toBuyCtrl">
+					<div class="row">
+						<div class="shopping-list-title column expand">To Buy:</div>
+					</div>
+					<div
+						class="shopping-list-item yellow row layout-padding layout-margin"
+						ng-repeat="item in toBuyCtrl.itemList">
+						<span class="column expand">Buy {{ item.quantity }} {{ item.name }}</span>
+						<button class="column" type="button" ng-click="toBuyCtrl.buyItem($index)">Bought</button>
+					</div>
+					<div
+						class="row"
+						ng-if="toBuyCtrl.itemList.length == 0">
+						<span class="column expand green layout-padding">{{ ::toBuyCtrl.emptyMessage }}</span>
+					</div>
+				</div>
+
+				<!-- Items alredy bought -->
+				<div
+					class="shopping-list column expand"
+					ng-controller="boughtShoppingListCtrl as boughtCtrl">
+					<div class="shopping-list-title row">Already Bought:</div>
+					<div
+						class="shopping-list-item green row layout-padding layout-margin"
+						ng-repeat="item in boughtCtrl.itemList">
+						<span class="column">Buy {{ item.quantity }} {{ item.name }}</span>
+					</div>
+					<div
+						class="row"
+						ng-if="boughtCtrl.itemList.length == 0">
+						<span class="column expand yellow layout-padding">{{ ::boughtCtrl.emptyMessage }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
