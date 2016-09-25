@@ -14,7 +14,8 @@
 			{ name: 'Chocolate Cookies', quantity: 10 },
 			{ name: 'Sugary drinks'    , quantity: 15 },
 			{ name: 'Vanilla Cookies'  , quantity: 5  },
-			{ name: 'snacks'           , quantity: 3  }
+			{ name: 'snacks'           , quantity: 3  },
+			{ name: 'ice cream'        , quantity: 15 }
 		];
 
 		service.boughtItems = [];
