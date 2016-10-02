@@ -21,8 +21,8 @@
 					var regexp = new RegExp(searchTerm, 'i');
 
 					return item.description.match(regexp);
-				})
-			})
+				});
+			});
 		}
 	}
 

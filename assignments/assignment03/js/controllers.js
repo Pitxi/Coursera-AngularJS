@@ -11,12 +11,16 @@
 		ctrl.searchTerm = '';
 
 		ctrl.searchItems = function() {
-			if (!!ctrl.searchTerm) {
-				MenuSearchService.getMatchedMenuItems(ctrl.searchTerm)
-				.then(function(response) {
-					ctrl.found = response;
-				});
+			if (!ctrl.searchTerm) {
+				ctrl.found = [];
+				return;
 			}
+
+			MenuSearchService.getMatchedMenuItems(ctrl.searchTerm)
+			.then(function(response) {
+				console.log(response);
+				ctrl.found = response;
+			});
 		};
 
 		ctrl.removeItem = function(index) {
