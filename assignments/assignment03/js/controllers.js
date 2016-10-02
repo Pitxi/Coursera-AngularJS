@@ -18,7 +18,6 @@
 
 			MenuSearchService.getMatchedMenuItems(ctrl.searchTerm)
 			.then(function(response) {
-				console.log(response);
 				ctrl.found = response;
 			});
 		};

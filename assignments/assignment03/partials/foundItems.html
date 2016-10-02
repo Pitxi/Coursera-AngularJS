@@ -1,17 +1,17 @@
 <!-- Only show element if there is a foundItems array and it has items on it -->
-<div class="col-lg-12 bg-info" ng-if="!!ctrl.foundItems && !ctrl.foundItems.length">Nothing found</div>
+<div class="col-lg-12 bg-info" ng-if="!!foundItems && !foundItems.length">Nothing found</div>
 
-<table class="table table-striped table-bordered" ng-if="ctrl.foundItems.length">
+<table class="table table-striped table-bordered" ng-if="foundItems.length">
 	<tbody>
 		<th>Name</th>
 		<th>Short Name</th>
 		<th>Description</th>
 		<th>Actions</th>
-		<tr ng-repeat="item in ctrl.foundItems track by $index">
+		<tr ng-repeat="item in foundItems track by $index">
 			<td>{{ item.name }}</td>
 			<td>{{ item.short_name }}</td>
 			<td class="col-lg-5">{{ item.description }}</td>
-			<td><button class="btn btn-block" ng-click="ctrl.removeItem($index)">Don't want this one!</button></td>
+			<td><button class="btn btn-block" ng-click="onRemove({index: $index})">Don't want this one!</button></td>
 		</tr>
 	</tbody>
 </ta>
