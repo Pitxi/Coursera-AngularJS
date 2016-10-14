@@ -1,0 +1,12 @@
+{
+    "localPath": "./",
+    "remotePath": "./",
+    "host": "",
+    "username": "username",
+    "password": "password",
+    "ignore": [
+        ".git",
+        ".vscode",
+        "node_modules"
+    ]
+}

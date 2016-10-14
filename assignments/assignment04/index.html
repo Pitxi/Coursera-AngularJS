@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+	<head>
+		<title>Assignment 04 -- Restaurant</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Libraries -->
+		<script src="../../bower_components/angular/angular.min.js"></script>
+		<script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<link href="../../bower_components/bootstrap-css-only/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../../bower_components/bootstrap-css-only/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<link href="style.css" rel="stylesheet" type="text/css">
+
+		<!-- Modules -->
+		<script src="js/menuapp.module.js"></script>
+		<script src="js/data.module.js"></script>
+
+		<!-- MenuApp artifgacts -->
+		<script src="js/menuapp/categories.controller.js"></script>
+		<script src="js/menuapp/items.controller.js"></script>
+		<script src="js/menuapp/categories.component.js"></script>
+		<script src="js/menuapp/items.component.js"></script>
+		<script src="js/menuapp/spinner.component.js"></script>
+
+		<!-- data artifacts -->
+		<script src="js/data/menudata.service.js"></script>
+
+		<!-- Routes -->
+		<script src="js/menuapp/routes.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ui-view></ui-view>
+		</div>
+		<spinner></spinner>
+	</body>
+</html>

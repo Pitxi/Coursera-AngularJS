@@ -1,0 +1,13 @@
+<div class="panel panel-info">
+	<div class="panel-body bg-info items-container">
+		<ol>
+			<li ng-repeat="item in $ctrl.itemsList">
+				<dl>
+					<dt>{{ item.name }}</dt>
+					<dd>{{ item.description }}</dd>
+				</dl>
+				<hr>
+			</li>
+		</ol>
+	</div>
+</div>

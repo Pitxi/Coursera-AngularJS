@@ -1,0 +1,16 @@
+<h1>Menu categories</h1>
+<button class="btn btn-default" type="button" ui-sref="home">
+	<span class="glyphicon glyphicon-home"></span> Home
+</button>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-6">
+				<categories categories-list="Categories.categories"></categories>
+			</div>
+			<div class="col-md-6">
+				<ui-view></ui-view>
+			</div>
+		</div>
+	</div>
+</div>
